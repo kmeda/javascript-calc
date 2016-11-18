@@ -33,7 +33,46 @@
     .device-layout .device .screen {
       height: 100px;
       width: 100%;
-      background-color: #282e25; }
+      background-color: #282e25;
+      border-bottom: 1px solid white; }
+      .device-layout .device .screen .main-screen {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        height: 70%;
+        color: white;
+        font-size: 3em;
+        text-align: right;
+        margin-left: -10px; }
+      .device-layout .device .screen .chaining {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        height: 30%;
+        color: #a2a0a0;
+        font-size: 1.5em;
+        text-align: right;
+        margin-left: -10px; }
     .device-layout .device .keys {
       display: -webkit-box;
       display: -webkit-flex;
@@ -46,6 +85,7 @@
               flex-direction: column;
       height: 300px;
       width: 100%;
+      background-color: white;
       -webkit-border-bottom-right-radius: 12px;
               border-bottom-right-radius: 12px;
       -webkit-border-bottom-left-radius: 12px;
@@ -54,16 +94,18 @@
         height: 60px;
         width: 100%;
         border-bottom: 1px solid white; }
+        .device-layout .device .keys .row-1 button, .device-layout .device .keys .row-2 button, .device-layout .device .keys .row-3 button, .device-layout .device .keys .row-4 button, .device-layout .device .keys .row-5 button {
+          border: none;
+          outline: none; }
       .device-layout .device .keys .col-1, .device-layout .device .keys .col-2, .device-layout .device .keys .col-3 {
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -ms-inline-flexbox;
         display: inline-flex;
-        width: 112px;
+        width: 113px;
         height: 100%;
-        border-right: 1px solid white; }
-      .device-layout .device .keys .col-1, .device-layout .device .keys .col-2, .device-layout .device .keys .col-3 {
-        background-color: #908989; }
+        background-color: #908989;
+        border-right: 1px solid white !important; }
       .device-layout .device .keys .col-4 {
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
@@ -83,13 +125,21 @@
                     -ms-grid-row-align: center;
                 align-items: center;
         text-align: center;
-        -webkit-box-shadow: inset -1px -1px 10px 1px #ddd9d5;
-                box-shadow: inset -1px -1px 10px 1px #ddd9d5;
+        -webkit-box-shadow: inset -2px -2px 15px 3px #282625;
+                box-shadow: inset -2px -2px 15px 3px #282625;
         font-family: "Fira Sans";
-        font-size: 1.2em; }
+        font-size: 1.2em;
+        cursor: pointer; }
+        .device-layout .device .keys .col-1:active, .device-layout .device .keys .col-2:active, .device-layout .device .keys .col-3:active, .device-layout .device .keys .col-4:active {
+          -webkit-box-shadow: inset -2px -1px 10px 1px #282625;
+                  box-shadow: inset -2px -1px 10px 1px #282625; }
       .device-layout .device .keys .row-1 .col-4, .device-layout .device .keys .row-2 .col-4, .device-layout .device .keys .row-3 .col-4, .device-layout .device .keys .row-4 .col-4, .device-layout .device .keys .row-5 .col-4 {
-        border: none !important;
-        background-color: #ff9900; }
+        background-color: #ff9900;
+        -webkit-box-shadow: inset -2px -2px 15px 3px #282625;
+                box-shadow: inset -2px -2px 15px 3px #282625; }
+        .device-layout .device .keys .row-1 .col-4:active, .device-layout .device .keys .row-2 .col-4:active, .device-layout .device .keys .row-3 .col-4:active, .device-layout .device .keys .row-4 .col-4:active, .device-layout .device .keys .row-5 .col-4:active {
+          -webkit-box-shadow: inset -2px -1px 10px 1px #282625;
+                  box-shadow: inset -2px -1px 10px 1px #282625; }
       .device-layout .device .keys .row-5 {
         border: none !important;
         -webkit-border-bottom-left-radius: 12px;
@@ -99,11 +149,10 @@
       .device-layout .device .keys .row-5 .col-1 {
         -webkit-border-bottom-left-radius: 12px;
                 border-bottom-left-radius: 12px;
-        width: 225px; }
+        width: 226px; }
       .device-layout .device .keys .row-5 .col-4 {
         -webkit-border-bottom-right-radius: 12px;
-                border-bottom-right-radius: 12px;
-        border-right: 1px solid #ff9900; }
+                border-bottom-right-radius: 12px; }
 
 body {
   margin: 0;
