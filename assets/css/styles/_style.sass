@@ -8,10 +8,8 @@
     flex-direction: column
     width: 452px
     height: 430px
-    //background-color: rgb(236, 218, 154)
     margin-top: 100px
     border-radius: 12px
-    //box-shadow: 0px 10px 25px
     box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e
 
     .header
@@ -25,46 +23,76 @@
       height: 100px
       width: 100%
       background-color: rgb(40, 46, 37)
+      border-bottom: 1px solid white
+
+
+      .main-screen
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        width: 100%
+        height: 70%
+        color: white
+        font-size: 3em
+        text-align: right
+        margin-left: -10px
+      .chaining
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        width: 100%
+        height: 30%
+        color: rgb(162, 160, 160)
+        font-size: 1.5em
+        text-align: right
+        margin-left: -10px
 
     .keys
       display: flex
       flex-direction: column
       height: 300px
       width: 100%
-      //background-color: rgb(255, 255, 255)
+      background-color: rgb(255, 255, 255)
       border-bottom-right-radius: 12px
       border-bottom-left-radius: 12px
       .row-1, .row-2, .row-3, .row-4, .row-5
         height: 60px
         width: 100%
-        //background-color: rgb(144, 137, 137)
         border-bottom: 1px solid white
+        button
+          border: none
+          outline: none
 
       .col-1, .col-2, .col-3
         display: inline-flex
-        width: 112px
+        width: 113px
         height: 100%
-        border-right: 1px solid white
-
-      .col-1, .col-2, .col-3
         background-color: rgb(144, 137, 137)
+        border-right: 1px solid white !important
       .col-4
         display: inline-flex
         width: 113px
         height: 100%
         color: white
+
       .col-1, .col-2, .col-3, .col-4
         justify-content: center
         align-items: center
         text-align: center
-        box-shadow: inset -1px -1px 10px 1px #ddd9d5
+        box-shadow: inset -2px -2px 15px 3px #282625
         font-family: "Fira Sans"
         font-size: 1.2em
+        cursor: pointer
+        &:active
+          box-shadow: inset -2px -1px 10px 1px #282625
 
       .row-1, .row-2, .row-3, .row-4, .row-5
         .col-4
-          border: none !important
           background-color: rgb(255, 153, 0)
+          box-shadow: inset -2px -2px 15px 3px #282625
+          &:active
+            box-shadow: inset -2px -1px 10px 1px #282625
+
       .row-5
         border: none !important
         border-bottom-left-radius: 12px
@@ -72,7 +100,6 @@
       .row-5
         .col-1
           border-bottom-left-radius: 12px
-          width: 225px
+          width: 226px
         .col-4
           border-bottom-right-radius: 12px
-          border-right: 1px solid rgb(255, 153, 0)

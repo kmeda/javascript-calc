@@ -2,32 +2,32 @@
   .device
     .header
     .screen
-      .main-screen
-      .chaining
+      .main-screen 0
+      .chaining 0
     .keys
       .row-1
-        .col-1 AC
-        .col-2 CE
-        .col-3 %
-        .col-4 ÷
+        button.col-1.all-clear(value='ac') AC
+        button.col-2.clear-entry(value='ce') CE
+        button.col-3.percent(value='%') %
+        button.col-4.division(value='/') ÷
       .row-2
-        .col-1 7
-        .col-2 8
-        .col-3 9
-        .col-4 x
+        button.col-1.seven(value='7') 7
+        button.col-2.eight(value='8') 8
+        button.col-3.nine(value='9') 9
+        button.col-4.multiply(value='*') x
 
       .row-3
-        .col-1 4
-        .col-2 5
-        .col-3 6
-        .col-4 -
+        button.col-1.four(value='4') 4
+        button.col-2.five(value='5') 5
+        button.col-3.six(value='6') 6
+        button.col-4.subtract(value='-') -
 
       .row-4
-        .col-1 1
-        .col-2 2
-        .col-3 3
-        .col-4 +
+        button.col-1.one(value='1') 1
+        button.col-2.two(value='2') 2
+        button.col-3.three(value='3') 3
+        button.col-4.addition(value='+') +
       .row-5
-        .col-1 0
-        .col-2 .
-        .col-4 =
+        button.col-1.zero(value='0') 0
+        button.col-2.decimal(value='.') .
+        button.col-4.result(value='=') =
