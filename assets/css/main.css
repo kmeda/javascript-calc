@@ -40,6 +40,10 @@
       height: 224px;
       background-color: rgba(0, 0, 0, 0.7); }
       .device-layout .device .keys .row-1, .device-layout .device .keys .row-2, .device-layout .device .keys .row-3, .device-layout .device .keys .row-4, .device-layout .device .keys .row-5 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         width: 380px;
         height: 44.8px; }
         .device-layout .device .keys .row-1 .col-1, .device-layout .device .keys .row-1 .col-2, .device-layout .device .keys .row-1 .col-3, .device-layout .device .keys .row-1 .col-4, .device-layout .device .keys .row-2 .col-1, .device-layout .device .keys .row-2 .col-2, .device-layout .device .keys .row-2 .col-3, .device-layout .device .keys .row-2 .col-4, .device-layout .device .keys .row-3 .col-1, .device-layout .device .keys .row-3 .col-2, .device-layout .device .keys .row-3 .col-3, .device-layout .device .keys .row-3 .col-4, .device-layout .device .keys .row-4 .col-1, .device-layout .device .keys .row-4 .col-2, .device-layout .device .keys .row-4 .col-3, .device-layout .device .keys .row-4 .col-4, .device-layout .device .keys .row-5 .col-1, .device-layout .device .keys .row-5 .col-2, .device-layout .device .keys .row-5 .col-3, .device-layout .device .keys .row-5 .col-4 {
