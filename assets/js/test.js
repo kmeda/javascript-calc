@@ -1,3 +1,4 @@
+// final draft
 $(document).ready(function() {
 
   var entry = '';
@@ -34,7 +35,7 @@ $(document).ready(function() {
 
     //reset for log after answer to equation.
     if (reset) {
-      if (entry === '/' || entry === '*' || entry === '-' || entry === '+' || entry === '%') {
+      if (entry === '/' || entry === '*' || entry === '-' || entry === '+') {
         log = ans;
       } else {
         ans = '';
@@ -48,18 +49,18 @@ $(document).ready(function() {
       current = '';
       entry = '';
       log = '';
-      $('.chaining').html('0');
-      $('.main-screen').html('0');
+      $('#history').html('0');
+      $('#answer').html('0');
       decimal = true;
     } else if (entry === 'ce') {
-      $('.chaining').html(log.slice(0, -current.length));
+      $('#history').html(log.slice(0, -current.length));
       log = log.slice(0, -current.length);
       ans = ans.slice(0, -current.length);
       current = ans;
       if (log.length === 0 || log === ' ') {
-        $('.chaining').html('0');
+        $('#history').html('0');
       }
-      $('.main-screen').html('0');
+      $('#answer').html('0');
       entry = '';
       decimal = true;
     }
@@ -104,9 +105,9 @@ $(document).ready(function() {
           current += entry;
         }
         ans += entry;
-        $('.main-screen').html(current);
+        $('#answer').html(current);
         log += entry;
-        $('.chaining').html(log);
+        $('#history').html(log);
         entry = '';
       }
     }
@@ -117,16 +118,16 @@ $(document).ready(function() {
       if (current === '' || isNaN(current[current.length - 1])) {
         current = '0.';
         ans += entry;
-        $('.main-screen').html('0.');
+        $('#answer').html('0.');
         log += current;
-        $('.chaining').html(log);
+        $('#history').html(log);
 
       } else {
         current = current.concat('.');
         ans = ans.concat('.');
         log = ans;
-        $('.chaining').html(ans);
-        $('.main-screen').html(current);
+        $('#history').html(ans);
+        $('#answer').html(current);
       }
       entry = '';
       decimal = false;
@@ -135,8 +136,8 @@ $(document).ready(function() {
       current = '/';
       ans = round(eval(ans)) + current;
       log += current;
-      $('.chaining').html(log);
-      $('.main-screen').html('/');
+      $('#history').html(log);
+      $('#answer').html('/');
       entry = '';
       decimal = true;
 
@@ -144,8 +145,8 @@ $(document).ready(function() {
       current = '*';
       ans = round(eval(ans)) + current;
       log += 'x';
-      $('.chaining').html(log);
-      $('.main-screen').html('x');
+      $('#history').html(log);
+      $('#answer').html('x');
       entry = '';
       decimal = true;
 
@@ -153,8 +154,8 @@ $(document).ready(function() {
       current = '-';
       ans = round(eval(ans)) + current;
       log += current;
-      $('.chaining').html(log);
-      $('.main-screen').html('-');
+      $('#history').html(log);
+      $('#answer').html('-');
       entry = '';
       decimal = true;
 
@@ -162,29 +163,20 @@ $(document).ready(function() {
       current = '+';
       ans = round(eval(ans)) + current;
       log += current;
-      $('.chaining').html(log);
-      $('.main-screen').html('+');
+      $('#history').html(log);
+      $('#answer').html('+');
       entry = '';
       decimal = true;
 
-    } else if (entry === '%') { //Percentile mod
-      current = '%';
-      ans /=100;
-      log = ans;
-      $('.chaining').html(log);
-      $('.main-screen').html('%');
-      entry = '';
-      decimal = true;
-
-    }else if (entry === '=') {
+    } else if (entry === '=') {
       if (current[current.length - 1] === '.') {
         entry = '';
       } else {
         current = eval(ans).toString();
-        $('.main-screen').html(round(eval(ans)));
+        $('#answer').html(round(eval(ans)));
         ans = round(eval(ans));
         log += entry + ans;
-        $('.chaining').html(log);
+        $('#history').html(log);
         log = ans;
         entry = '';
         reset = true;
@@ -199,9 +191,9 @@ $(document).ready(function() {
     }
 
     // max digits on screen
-    if ($('.main-screen').text().length > 8 || $('.chaining').text().length > 33) {
-      $('.main-screen').html('0');
-      $('.chaining').html('Digit Limit Met');
+    if ($('#entry').children().text().length > 8 || $('#history').text().length > 22) {
+      $('#answer').html('0');
+      $('#history').html('Digit Limit Met');
       current = '';
       ans = '';
       log = '';
@@ -211,6 +203,6 @@ $(document).ready(function() {
     console.log('decimal: ' + decimal);
     console.log('current: ' + current);
     console.log('answer: ' + ans);
-    console.log($('.chaining').text().length);
+    console.log($('#history').text().length);
   });
-});
+}); // end doc ready function
