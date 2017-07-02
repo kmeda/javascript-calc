@@ -15,19 +15,5 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
-  },
-  "keywords": [
-    "jekyll",
-    "gulp",
-    "sass",
-    "browsersync"
-  ],
-  "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
-  },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  }
 }
