@@ -78,7 +78,7 @@ $(document).ready(function() {
 
     var getPercentile = function() {
       total /=100;
-      $(".main-screen").html(total);
+      $(".main-screen").html(total.toFixed(2));
     }
 
     $("button").on("click",function(){
