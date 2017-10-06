@@ -1,6 +1,6 @@
 $device-width: 380px
 $device-height: 320px
-$display-height: ($device-height/100)*22
+$display-height: ($device-height/100)*15
 $keypad-height: ($device-height/100)*70
 $row-height: ($keypad-height/100)*20
 $border-color: rgb(144, 147, 122)
@@ -27,23 +27,12 @@ $border-color: rgb(144, 147, 122)
       background-color: rgb(48, 47, 47)
       .main-screen
         width: $device-width
-        height: ($display-height/100)*60
-        //background-color: black
-        font-size: 1.8em
+        height: $display-height
+        font-size: 1.9em
         text-align: right
         margin-left: -10px
         font-family: Arial
         color: white
-      .chaining
-        width: $device-width
-        height: ($display-height/100)*40
-        //background-color: rgba(0,0,0,0.6)
-        color: rgb(162, 160, 160)
-        font-size: 1.2em
-        text-align: right
-        margin-left: -10px
-        font-family: Arial
-
 
     .keys
       width: $device-width
